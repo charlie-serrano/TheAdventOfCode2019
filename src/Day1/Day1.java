@@ -5,16 +5,19 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 public class Day1 {
 
-    private static List<Integer> readFileToArray(String fileName) throws IOException {
+    private static List<Integer> readFileToArray(String fileName, String delimiter) throws IOException {
         File file = new File(fileName);
         Scanner scanner = new Scanner(file);
+
+        scanner.useDelimiter(Pattern.compile(delimiter));
         List<Integer> outputArray = new ArrayList<>();
 
         while (scanner.hasNextLine()) {
-            String line = scanner.nextLine();
+            String line = scanner.next();
             outputArray.add(Integer.parseInt(line));
         }
         scanner.close();
@@ -45,7 +48,7 @@ public class Day1 {
 
     public static void main(String[] args) throws IOException {
         List<Integer> listOfModules;
-        listOfModules = readFileToArray("Data/Day1_fuelInput.txt");
+        listOfModules = readFileToArray("Data/Day1_fuelInput.txt", "\\s");
         System.out.println(calculateTotalFuelRequirement(listOfModules));
     }
 }
