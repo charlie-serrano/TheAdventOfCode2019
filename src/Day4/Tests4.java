@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 
-public class Tests {
+public class Tests4 {
     @Test
     public void testHasRepeatingDigits() {
         Day4 x = new Day4();
