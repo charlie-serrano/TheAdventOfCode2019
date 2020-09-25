@@ -20,14 +20,5 @@ public class Tests4 {
         assertEquals(x.hasNoDecreasingDigits(111111), true);
         assertEquals(x.hasNoDecreasingDigits(123456), true);
         assertEquals(x.hasNoDecreasingDigits(222122), false);
-
     }
-
-
-
-
-
-
-
-
 }

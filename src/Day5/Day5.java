@@ -8,7 +8,7 @@ public class Day5 {
 
     public Map<String, ArrayList<String>> allDirectOrbits = new HashMap<>();
 
-    public void readDirectOrbits(String fileName, String delimiter) throws IOException {
+    private void readDirectOrbits(String fileName, String delimiter) throws IOException {
         File file = new File(fileName);
         Scanner scanner = new Scanner(file).useDelimiter(delimiter);
 
