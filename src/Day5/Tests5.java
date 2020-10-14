@@ -38,6 +38,23 @@ public class Tests5 {
         assertEquals(day5.countDirectOrbits("FFF"), 0);
         assertEquals(day5.countDirectOrbits("GGG"), 0);
     }
+
+    @Test
+    public void testFindSmallestTransfers(){
+        Day5 day5 = new Day5();
+
+        day5.allDirectOrbiters.put("YYY", "ZZZ");
+        day5.allDirectOrbiters.put("XXX", "YYY");
+        day5.allDirectOrbiters.put("AAA", "XXX");
+        day5.allDirectOrbiters.put("BBB", "AAA");
+        day5.allDirectOrbiters.put("YOU", "BBB");
+        day5.allDirectOrbiters.put("CCC", "XXX");
+        day5.allDirectOrbiters.put("DDD", "CCC");
+        day5.allDirectOrbiters.put("EEE", "DDD");
+        day5.allDirectOrbiters.put("SAN", "EEE");
+
+        assertEquals(day5.findSmallestTransfers("YOU","SAN"), 5);
+    }
 }
 
 
